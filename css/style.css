@@ -1,0 +1,465 @@
+:root {
+    --main-color: #ff206e;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../webfonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans' ,sans-serif;
+}
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////// */
+/* Start HEADER */
+#home {
+    height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 10px;
+}
+
+.navbar-nav a {
+    color: #fff;
+    position: relative;
+    transition: 0.4s;
+    padding: 10px;
+}
+
+.navbar-nav a:hover,
+.navbar-nav .nav-link.active {
+    color: var(--main-color);
+}
+
+.pill {
+    width: 20px;
+    height: 50px;
+    position: relative;
+}
+
+.pill::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: move 1s infinite;
+}
+
+@keyframes move {
+    0% {
+        top: 10px;
+    }
+
+    100% {
+        top: 60%;
+        opacity: 0.3;
+    }
+}
+
+header button.navbar-toggler {
+    background-color: var(--main-color);
+}
+/* ///////////////////////// */
+.content a {
+    color: var(--main-color);
+}
+
+#home .icons i {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #4d4848;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#home .icons i:hover {
+    border-color: var(--main-color);
+}
+/* End HEADER */
+
+.special-content h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    color: #ccc;
+    user-select: none;
+    opacity: 0.3;
+}
+
+.special-content.special h2 {
+    font-size: 2.5rem;
+}
+
+.layer {
+    background-color: #ffffffc2;
+    top: 0;
+    bottom: 110%;
+    left: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#portfolio .item:hover .layer {
+    bottom: 15px;
+    opacity: 1;
+}
+
+#portfolio .item .icons {
+    display: flex;
+    gap: 5px;
+}
+
+#portfolio .item i {
+    background-color: black;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+#portfolio .item i:hover {
+    color: var(--main-color);
+}
+
+#portfolio .item img {
+    transition: 0.3s;
+}
+
+#portfolio .item:hover img {
+    filter: blur(5px);
+}
+
+.modal .modal-dialog {
+    top: 50%;
+    transform: translatey(-50%) !important;
+}
+
+.letter {
+    position: relative;
+}
+
+.letter::after {
+    content: "";
+    width: 5%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: var(--main-color);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+}
+
+.main-p {
+    margin-top: -10px;
+}
+
+#about .about-text h6 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+#about img {
+    border-radius: 20px;
+}
+
+/* .progreess {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: transparent;
+    position: relative;
+} */
+
+/* .progreess::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 10px solid var(--main-color);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.progreess::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 10px solid #222;
+    border-radius: 50%;
+} */
+
+#services i {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    transition: 0.3s;
+    color: #fff;
+}
+
+#services i:hover {
+    color: var(--main-color);
+}
+
+#services h4 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#services h4::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--main-color);
+}
+
+#portfolio .nav-pills .nav-link.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#portfolio .nav-link {
+    color: var(--main-color);
+}
+
+#price h4 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#price h4::after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+}
+
+
+#price h5 {
+    color: var(--main-color);
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+#price p {
+    border-color: #ccc;
+}
+
+#price button {
+    width: 100px;
+    height: 45px;
+    transition: 0.3s;
+}
+
+#price button:hover {
+    background-color: var(--main-color);
+    color: #222;
+    border-color: var(--main-color);
+}
+
+#counter {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(../images/1\ \(2\).jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#blog .content {
+    position: relative;
+}
+
+#blog .content > i {
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transform: translatey(-50%);
+    transition: 0.3s;
+}
+
+#blog .content > i:hover {
+    color: var(--main-color);
+}
+
+#counter h3 {
+    color: var(--main-color);
+}
+
+#blog .row .icon p {
+    color: var(--main-color);
+
+}
+
+#blog .row .item .photo {
+    overflow: hidden;
+}
+
+#blog .row .item img {
+    transition: 0.3s;
+}
+
+#blog .row .item:hover img {
+    transform: scale(1.2);
+}
+
+#contact form input,
+#contact form textarea {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: black;
+    
+}
+
+#contact form ::placeholder {
+    color: #ccc;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+   
+    border-bottom: 2px solid var(--main-color);
+    box-shadow: none;
+}
+
+#contact form button {
+    padding: 10px 30px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+#contact form button:hover {
+    background-color: var(--main-color);
+    color:#fff;
+}
+
+#contact p {
+    color: #ccc;
+}
+
+#contact .row h6 {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+#client img {
+    width: 80px;
+}
+/* ///////////////////////// */
+#skill .container .progreess {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    color: #fff;
+    background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
+}
+
+#skill .container .progreess h3 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2em;
+    z-index: 1;
+    font-weight: 500;
+}
+
+#skill .container .progreess h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+}
+
+#skill .container .progreess h4 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    z-index: 1;
+    font-weight: 500;
+    color: var(--clr);
+    text-transform: uppercase;
+}
+
+#skill .container .progreess::before {
+    content: "";
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+    background: var(--clr);
+    transform: rotate(calc(((var(--i) - 50) * 0.01turn )));
+}
+
+#skill .container .progreess::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 50%;
+    background-color: #222;
+}
+
+#skill .container .progreess.less::before {
+    background: #444;
+    transform: rotate(calc(((var(--i) - 0) * 0.01turn )));
+}
+/* ///////////////////////// */
